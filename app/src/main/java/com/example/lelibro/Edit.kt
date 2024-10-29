@@ -90,7 +90,7 @@ class Edit : AppCompatActivity() {
                 "Pilih dari galeri" -> {
                     val intent = Intent(Intent.ACTION_PICK)
                     intent.type = "image/*"
-                    startActivityForResult(Intent.createChooser(intent, "Select Image"), 20)
+                    startActivityForResult(Intent.createChooser(intent, "Pilih Gambar"), 20)
                 }
                 "Batal" -> dialog.dismiss()
             }
