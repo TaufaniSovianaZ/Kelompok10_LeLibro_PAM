@@ -21,7 +21,6 @@ import kotlinx.coroutines.withContext
 class BookAdapter(
     private val context: Context,
     private val ListBook: MutableList<Book>,
-//    private val dataChangeListener: DataChangeListener? = null
 ) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
     class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -58,7 +57,3 @@ class BookAdapter(
         return ListBook.size
     }
 }
-
-//interface DataChangeListener {
-//    fun onDataChange()
-//}

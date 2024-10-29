@@ -138,7 +138,7 @@ class AddBook : AppCompatActivity() {
             val storageRef = storage.reference.child("images/$bookId.jpeg")
             val uploadTask = storageRef.putBytes(data)
             uploadTask.addOnFailureListener { exception ->
-                Toast.makeText(this, "Failed to upload image: ${exception.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Gagal mengunggah gambar: ${exception.message}", Toast.LENGTH_SHORT).show()
                 onComplete(DEFAULT_IMAGE_URL)
             }.addOnSuccessListener { taskSnapshot ->
                 taskSnapshot.metadata?.reference?.downloadUrl?.addOnCompleteListener { task ->
@@ -146,7 +146,7 @@ class AddBook : AppCompatActivity() {
                         val downloadUrl = task.result.toString()
                         onComplete(downloadUrl)
                     } else {
-                        Toast.makeText(this, "Failed to get download URL", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Gagal untuk mendapatkan URL", Toast.LENGTH_SHORT).show()
                         onComplete(DEFAULT_IMAGE_URL)
                     }
                 }

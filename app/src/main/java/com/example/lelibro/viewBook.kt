@@ -224,12 +224,12 @@ class viewBook : AppCompatActivity() {
                         Toast.makeText(this, "Gagal Menghapus dari Database", Toast.LENGTH_LONG).show()
                     }
                 }.addOnFailureListener { exception ->
-                    Log.e("storage_error", "Failed to delete from Storage", exception)
-                    Toast.makeText(this, "Gagal menghapus dari storage", Toast.LENGTH_SHORT).show()
+                    Log.e("storage_error", "Gagal menghapus dari penyimpanan", exception)
+                    Toast.makeText(this, "Gagal menghapus dari penyimpanan", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
-                Log.e("delete_error", "An error occurred", e)
-                Toast.makeText(this, "Terjadi kesalahan saat menghapus file dari storage", Toast.LENGTH_SHORT).show()
+                Log.e("delete_error", "Terjadi kesalahan", e)
+                Toast.makeText(this, "Terjadi kesalahan saat menghapus file dari penyimpanan", Toast.LENGTH_SHORT).show()
             }
         } else {
             Toast.makeText(this, "URL atau kunci tidak boleh kosong", Toast.LENGTH_SHORT).show()
